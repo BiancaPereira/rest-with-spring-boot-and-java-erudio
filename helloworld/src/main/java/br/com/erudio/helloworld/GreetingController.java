@@ -1,4 +1,4 @@
-package br.com.erudio.restwithspringbootandjavaerudio;
+package br.com.erudio.helloworld;
 
 import java.util.concurrent.atomic.AtomicLong;
 

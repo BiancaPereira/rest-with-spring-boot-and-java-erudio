@@ -1,4 +1,4 @@
-package br.com.erudio.restwithspringbootandjavaerudio;
+package br.com.erudio.helloworld;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

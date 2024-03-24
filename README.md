@@ -8,10 +8,12 @@ Repo de estudos para o curso de Java que estou fazendo ✨📝
 
 - Java 18
 - Maven 3
+- Spring Boot 3
 - Spring Tools 4
 - VS Code
 - Postman
 - Docker
+- AWS
 
 ## Projetos
 

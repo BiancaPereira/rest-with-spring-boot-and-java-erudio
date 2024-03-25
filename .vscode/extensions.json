@@ -1,0 +1,20 @@
+{
+    "recommendations": [
+        "vscjava.vscode-java-debug",
+        "visualstudioexptteam.vscodeintellicode",
+        "visualstudioexptteam.intellicode-api-usage-examples",
+        "vscjava.vscode-maven",
+        "vscjava.vscode-java-test",
+        "vscjava.vscode-spring-initializr",
+        "vmware.vscode-spring-boot",
+        "vmware.vscode-boot-dev-pack",
+        "vscjava.vscode-spring-boot-dashboard",
+        "sonarsource.sonarlint-vscode",
+        "redhat.vscode-rsp-ui",
+        "redhat.fabric8-analytics",
+        "vscjava.vscode-java-dependency",
+        "redhat.java",
+        "vscjava.vscode-java-pack",
+        "redhat.vscode-community-server-connector"
+    ]
+}

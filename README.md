@@ -20,4 +20,4 @@ Repo de estudos para o curso de Java que estou fazendo ✨📝
 | Projeto | Descrição |
 |---------|-----------|
 |helloworld| Imprime um Hello, world! na tela. O 'world' é um parâmetro name que pode ser mudado através de query params.|
-|calculator| Cria uma calculadora de operações simples. Aqui aprendi sobre criar exceções customizadas e status code.|
+|calculator| Cria uma calculadora de operações simples. Aqui aprendi sobre criar path params, exceções customizadas e status code.|

@@ -1,0 +1,93 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "Calculator",
+    "dateExported": "2024-03-25T23:54:19.205Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "8d256f72-0511-4b6c-ae47-bee1ed26ad26",
+            "colId": "423f830d-6fd5-47bd-bd98-e54335303145",
+            "containerId": "",
+            "name": "sum",
+            "url": "localhost:8080/sum/1/2",
+            "method": "GET",
+            "sortNum": 10000,
+            "created": "2024-03-25T00:39:21.074Z",
+            "modified": "2024-03-25T23:40:32.633Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "8ecb1c63-d03b-4516-b34d-be0a617ec70e",
+            "colId": "423f830d-6fd5-47bd-bd98-e54335303145",
+            "containerId": "",
+            "name": "subtraction",
+            "url": "localhost:8080/subtraction/1/2",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2024-03-25T23:40:58.598Z",
+            "modified": "2024-03-25T23:41:07.817Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "9c561a40-326b-488d-9c81-970758b9e1e5",
+            "colId": "423f830d-6fd5-47bd-bd98-e54335303145",
+            "containerId": "",
+            "name": "multiplication",
+            "url": "localhost:8080/multiplication/2/2",
+            "method": "GET",
+            "sortNum": 30000,
+            "created": "2024-03-25T23:42:07.966Z",
+            "modified": "2024-03-25T23:42:19.373Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "8c8dd73e-abb6-4174-8b68-9892d123b7f4",
+            "colId": "423f830d-6fd5-47bd-bd98-e54335303145",
+            "containerId": "",
+            "name": "division",
+            "url": "localhost:8080/division/2/0",
+            "method": "GET",
+            "sortNum": 40000,
+            "created": "2024-03-25T23:43:25.602Z",
+            "modified": "2024-03-25T23:44:42.884Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "9f89a0e5-964a-4a37-9658-b66955233ef8",
+            "colId": "423f830d-6fd5-47bd-bd98-e54335303145",
+            "containerId": "",
+            "name": "average",
+            "url": "localhost:8080/average/5/3",
+            "method": "GET",
+            "sortNum": 50000,
+            "created": "2024-03-25T23:48:28.780Z",
+            "modified": "2024-03-25T23:48:44.064Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "17361ec4-6731-4885-9836-2dfbb342dfa4",
+            "colId": "423f830d-6fd5-47bd-bd98-e54335303145",
+            "containerId": "",
+            "name": "square",
+            "url": "localhost:8080/square/7",
+            "method": "GET",
+            "sortNum": 60000,
+            "created": "2024-03-25T23:53:06.431Z",
+            "modified": "2024-03-25T23:53:42.596Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        }
+    ]
+}

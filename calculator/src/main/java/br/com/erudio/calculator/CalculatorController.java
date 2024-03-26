@@ -62,15 +62,15 @@ public class CalculatorController {
         return (convertToDouble(numberOne) + convertToDouble(numberTwo)) / 2;
     }
 
-    @RequestMapping(value = "/square/{numberOne}")
+    @RequestMapping(value = "/square/{number}")
     public Double square(
-        @PathVariable(value = "numberOne") String numberOne
+        @PathVariable(value = "number") String number
     ) {
-        if (!isNumeric(numberOne)) {
+        if (!isNumeric(number)) {
             throw new UnsupportedMathOperationException("Por favor, digite um valor numérico.");
         }
 
-        return convertToDouble(numberOne) * convertToDouble(numberOne);
+        return Math.sqrt(convertToDouble(number));
     }
 
     private void exceptionResponse(String numberOne, String numberTwo) {

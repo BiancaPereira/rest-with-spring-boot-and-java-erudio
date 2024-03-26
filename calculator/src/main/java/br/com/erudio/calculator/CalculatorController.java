@@ -4,10 +4,14 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import br.com.erudio.converters.NumberConverter;
 import br.com.erudio.exceptions.UnsupportedMathOperationException;
 
 @RestController
 public class CalculatorController {
+
+    private CalculatorOperations math = new CalculatorOperations();
+
     @RequestMapping(value = "/sum/{numberOne}/{numberTwo}")
     public Double sum(
         @PathVariable(value = "numberOne") String numberOne,
@@ -15,7 +19,7 @@ public class CalculatorController {
     ) {
         exceptionResponse(numberOne, numberTwo);
 
-        return convertToDouble(numberOne) + convertToDouble(numberTwo);
+        return math.sum(NumberConverter.convertToDouble(numberOne), NumberConverter.convertToDouble(numberTwo));
     }
 
     @RequestMapping(value = "/subtraction/{numberOne}/{numberTwo}")
@@ -25,7 +29,7 @@ public class CalculatorController {
     ) {
         exceptionResponse(numberOne, numberTwo);
 
-        return convertToDouble(numberOne) - convertToDouble(numberTwo);
+        return math.subtraction(NumberConverter.convertToDouble(numberOne), NumberConverter.convertToDouble(numberTwo));
     }
 
     @RequestMapping(value = "/multiplication/{numberOne}/{numberTwo}")
@@ -35,7 +39,7 @@ public class CalculatorController {
     ) {
         exceptionResponse(numberOne, numberTwo);
 
-        return convertToDouble(numberOne) * convertToDouble(numberTwo);
+        return math.multiplication(NumberConverter.convertToDouble(numberOne), NumberConverter.convertToDouble(numberTwo));
     }
 
     @RequestMapping(value = "/division/{numberOne}/{numberTwo}")
@@ -45,11 +49,11 @@ public class CalculatorController {
     ) {
         exceptionResponse(numberOne, numberTwo);
 
-        if (convertToDouble(numberTwo) == 0) {
+        if (NumberConverter.convertToDouble(numberTwo) == 0) {
             throw new UnsupportedMathOperationException("Não se pode dividir por zero.");
         }
 
-        return convertToDouble(numberOne) / convertToDouble(numberTwo);
+        return math.division(NumberConverter.convertToDouble(numberOne), NumberConverter.convertToDouble(numberTwo));
     }
 
     @RequestMapping(value = "/average/{numberOne}/{numberTwo}")
@@ -59,41 +63,24 @@ public class CalculatorController {
     ) {
         exceptionResponse(numberOne, numberTwo);
 
-        return (convertToDouble(numberOne) + convertToDouble(numberTwo)) / 2;
+        return math.average(NumberConverter.convertToDouble(numberOne), NumberConverter.convertToDouble(numberTwo));
     }
 
     @RequestMapping(value = "/square/{number}")
     public Double square(
         @PathVariable(value = "number") String number
     ) {
-        if (!isNumeric(number)) {
+        if (!NumberConverter.isNumeric(number)) {
             throw new UnsupportedMathOperationException("Por favor, digite um valor numérico.");
         }
 
-        return Math.sqrt(convertToDouble(number));
+        return math.square(NumberConverter.convertToDouble(number));
     }
 
     private void exceptionResponse(String numberOne, String numberTwo) {
-        if (!isNumeric(numberOne) || !isNumeric(numberTwo)) {
+        if (!NumberConverter.isNumeric(numberOne) || !NumberConverter.isNumeric(numberTwo)) {
             throw new UnsupportedMathOperationException("Por favor, digite um valor numérico.");
         }
     }
-
-    private Double convertToDouble(String strNumber) {
-        if (strNumber == null) return 0D;
-
-        String number = strNumber.replace(",", ".");
-
-        if (isNumeric(number)) return Double.parseDouble(number);
-
-        return 0D;
-    }
-
-    private boolean isNumeric(String strNumber) {
-        if (strNumber == null) return false;
-
-        String number = strNumber.replace(",", ".");
-
-        return number.matches("[-+]?\\d*\\.?\\d+");
-    }
+    
 }
